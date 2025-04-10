@@ -2,6 +2,17 @@
 
 This project compares the performance of two simple web APIs implementing the same functionality, one using Python with FastAPI and the other using Rust with Actix Web. Both APIs run in Docker containers with defined resource limits (CPU, Memory) for a fair comparison.
 
+## Performance Results
+
+Below is a summary of the benchmark results (averaged across 3 runs):
+
+| Metric | Python (FastAPI) | Rust (Actix Web) | Difference |
+|--------|------------------|------------------|------------|
+| `/hello` Requests/sec | 3139 | 35840 | Rust is 11.4x faster |
+| `/hello` Latency (ms) | 16.0 | 1.4 | Rust is 11.5x faster |
+| `/fib/35` Requests/sec | 2532 | 34187 | Rust is 13.5x faster |
+| `/fib/35` Latency (ms) | 19.8 | 1.5 | Rust is 13.5x faster |
+
 ## Endpoints
 
 Both APIs expose the following endpoints:
@@ -37,15 +48,5 @@ chmod +x ./bombardier.sh
 ./run_benchmark.sh
 ```
 
-## Performance Results
-
-Below is a summary of the benchmark results (averaged across 3 runs):
-
-| Metric | Python (FastAPI) | Rust (Actix Web) | Difference |
-|--------|------------------|------------------|------------|
-| `/hello` Requests/sec | 3139 | 35840 | Rust is 11.4x faster |
-| `/hello` Latency (ms) | 16.0 | 1.4 | Rust is 11.5x faster |
-| `/fib/35` Requests/sec | 2532 | 34187 | Rust is 13.5x faster |
-| `/fib/35` Latency (ms) | 19.8 | 1.5 | Rust is 13.5x faster |
 
 
