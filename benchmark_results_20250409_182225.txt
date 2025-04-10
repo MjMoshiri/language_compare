@@ -1,0 +1,178 @@
+Benchmark Run: 20250409_182225
+Parameters:
+  Concurrency: 200
+  Duration:    30s
+  Fibonacci N: 35
+  Runs:        3
+==================================================
+
+--- Starting Run 1 of 3 ---
+Timestamp: Wed Apr  9 06:22:25 PM PDT 2025
+--------------------------------------------------
+
+--- Python /hello (Run 1) ---
+Bombarding http://localhost:8000/hello for 30s using 200 connection(s)
+
+Statistics        Avg      Stdev        Max
+  Reqs/sec     13515.69    2792.24   21897.55
+  Latency       14.79ms     5.33ms   506.57ms
+  HTTP codes:
+    1xx - 0, 2xx - 405578, 3xx - 0, 4xx - 0, 5xx - 0
+    others - 0
+  Throughput:     2.98MB/s
+--------------------------------------------------
+
+--- Python /fib/35 (Run 1) ---
+Bombarding http://localhost:8000/fib/35 for 30s using 200 connection(s)
+
+
+Statistics        Avg      Stdev        Max
+  Reqs/sec     11490.77    2515.41   18736.89
+  Latency       17.40ms     7.29ms   673.72ms
+  HTTP codes:
+    1xx - 0, 2xx - 344743, 3xx - 0, 4xx - 0, 5xx - 0
+    others - 0
+  Throughput:     2.39MB/s
+--------------------------------------------------
+
+--- Rust /hello (Run 1) ---
+Bombarding http://localhost:8001/hello for 30s using 200 connection(s)
+
+
+Statistics        Avg      Stdev        Max
+  Reqs/sec     69749.36    8288.66   84915.10
+  Latency        2.86ms   533.10us    47.75ms
+  HTTP codes:
+    1xx - 0, 2xx - 2092380, 3xx - 0, 4xx - 0, 5xx - 0
+    others - 0
+  Throughput:    11.17MB/s
+--------------------------------------------------
+
+--- Rust /fib/35 (Run 1) ---
+Bombarding http://localhost:8001/fib/35 for 30s using 200 connection(s)
+
+
+Statistics        Avg      Stdev        Max
+  Reqs/sec     66202.39    4857.98   78298.19
+  Latency        3.02ms   333.24us    25.53ms
+  HTTP codes:
+    1xx - 0, 2xx - 1986085, 3xx - 0, 4xx - 0, 5xx - 0
+    others - 0
+  Throughput:    12.69MB/s
+--------------------------------------------------
+
+--- Starting Run 2 of 3 ---
+Timestamp: Wed Apr  9 06:24:50 PM PDT 2025
+--------------------------------------------------
+
+--- Python /hello (Run 2) ---
+Bombarding http://localhost:8000/hello for 30s using 200 connection(s)
+
+
+Statistics        Avg      Stdev        Max
+  Reqs/sec     13870.32    2463.17   21791.50
+  Latency       14.42ms     5.42ms   533.22ms
+  HTTP codes:
+    1xx - 0, 2xx - 416085, 3xx - 0, 4xx - 0, 5xx - 0
+    others - 0
+  Throughput:     3.05MB/s
+--------------------------------------------------
+
+--- Python /fib/35 (Run 2) ---
+Bombarding http://localhost:8000/fib/35 for 30s using 200 connection(s)
+
+
+Statistics        Avg      Stdev        Max
+  Reqs/sec     11426.01    2457.54   19736.82
+  Latency       17.50ms     8.22ms   769.13ms
+  HTTP codes:
+    1xx - 0, 2xx - 342907, 3xx - 0, 4xx - 0, 5xx - 0
+    others - 0
+  Throughput:     2.38MB/s
+--------------------------------------------------
+
+--- Rust /hello (Run 2) ---
+Bombarding http://localhost:8001/hello for 30s using 200 connection(s)
+
+
+Statistics        Avg      Stdev        Max
+  Reqs/sec     72061.39    5653.97   85582.68
+  Latency        2.77ms   339.20us    22.39ms
+  HTTP codes:
+    1xx - 0, 2xx - 2162036, 3xx - 0, 4xx - 0, 5xx - 0
+    others - 0
+  Throughput:    11.55MB/s
+--------------------------------------------------
+
+--- Rust /fib/35 (Run 2) ---
+Bombarding http://localhost:8001/fib/35 for 30s using 200 connection(s)
+
+
+Statistics        Avg      Stdev        Max
+  Reqs/sec     67462.36    4935.75   79498.49
+  Latency        2.96ms   300.58us    21.51ms
+  HTTP codes:
+    1xx - 0, 2xx - 2023917, 3xx - 0, 4xx - 0, 5xx - 0
+    others - 0
+  Throughput:    12.93MB/s
+--------------------------------------------------
+
+--- Starting Run 3 of 3 ---
+Timestamp: Wed Apr  9 06:27:16 PM PDT 2025
+--------------------------------------------------
+
+--- Python /hello (Run 3) ---
+Bombarding http://localhost:8000/hello for 30s using 200 connection(s)
+
+
+Statistics        Avg      Stdev        Max
+  Reqs/sec     14666.90    2264.94   21868.25
+  Latency       13.63ms     4.36ms   482.77ms
+  HTTP codes:
+    1xx - 0, 2xx - 439952, 3xx - 0, 4xx - 0, 5xx - 0
+    others - 0
+  Throughput:     3.23MB/s
+--------------------------------------------------
+
+--- Python /fib/35 (Run 3) ---
+Bombarding http://localhost:8000/fib/35 for 30s using 200 connection(s)
+
+
+Statistics        Avg      Stdev        Max
+  Reqs/sec     11344.81    2498.99   19319.64
+  Latency       17.62ms     7.62ms   713.32ms
+  HTTP codes:
+    1xx - 0, 2xx - 340444, 3xx - 0, 4xx - 0, 5xx - 0
+    others - 0
+  Throughput:     2.36MB/s
+--------------------------------------------------
+
+--- Rust /hello (Run 3) ---
+Bombarding http://localhost:8001/hello for 30s using 200 connection(s)
+
+
+Statistics        Avg      Stdev        Max
+  Reqs/sec     71861.92    6000.36   86271.35
+  Latency        2.78ms   375.06us    23.85ms
+  HTTP codes:
+    1xx - 0, 2xx - 2155948, 3xx - 0, 4xx - 0, 5xx - 0
+    others - 0
+  Throughput:    11.51MB/s
+--------------------------------------------------
+
+--- Rust /fib/35 (Run 3) ---
+Bombarding http://localhost:8001/fib/35 for 30s using 200 connection(s)
+
+
+Statistics        Avg      Stdev        Max
+  Reqs/sec     67405.98    5597.34   79253.17
+  Latency        2.96ms   342.17us    21.03ms
+  HTTP codes:
+    1xx - 0, 2xx - 2022065, 3xx - 0, 4xx - 0, 5xx - 0
+    others - 0
+  Throughput:    12.92MB/s
+--------------------------------------------------
+
+==================================================
+Benchmark Completed: Wed Apr  9 06:29:31 PM PDT 2025
+==================================================

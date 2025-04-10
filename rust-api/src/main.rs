@@ -107,7 +107,7 @@ async fn main() -> std::io::Result<()> {
             .service(hello)
     })
     .bind(("0.0.0.0", 8001))?
-    .workers(1) // Explicitly set to 1 worker thread for fair comparison initially
+    .workers(2)
     .run()
     .await
 }

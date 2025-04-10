@@ -9,8 +9,8 @@ services:
     deploy:                # <--- Deploy section (Correct indentation)
       resources:
         limits:
-          cpus: '1.0'
-          memory: 1G
+          cpus: '2.0'
+          memory: 2G
     networks:              # <--- Networks section (Correct indentation)
       - api_compare_net
     restart: unless-stopped
@@ -23,8 +23,8 @@ services:
     deploy:                # <--- Deploy section (Correct indentation)
       resources:
         limits:
-          cpus: '1.0'
-          memory: 1G
+          cpus: '2.0'
+          memory: 2G
     networks:              # <--- Networks section (Correct indentation)
       - api_compare_net
     restart: unless-stopped

@@ -6,12 +6,25 @@ This project compares the performance of two simple web APIs implementing the sa
 
 Below is a summary of the benchmark results (averaged across 3 runs):
 
+### Single Core - 50 Concurrent Connections
+
 | Metric | Python (FastAPI) | Rust (Actix Web) | Difference |
 |--------|------------------|------------------|------------|
 | `/hello` Requests/sec | 3139 | 35840 | Rust is 11.4x faster |
 | `/hello` Latency (ms) | 16.0 | 1.4 | Rust is 11.5x faster |
 | `/fib/35` Requests/sec | 2532 | 34187 | Rust is 13.5x faster |
 | `/fib/35` Latency (ms) | 19.8 | 1.5 | Rust is 13.5x faster |
+
+### Dual Core - 200 Concurrent Connections
+
+| Metric | Python (FastAPI) | Rust (Actix Web) | Difference |
+|--------|------------------|------------------|------------|
+| `/hello` Requests/sec | 14018 | 71224 | Rust is 5.1x faster |
+| `/hello` Latency (ms) | 14.3 | 2.8 | Rust is 5.1x faster |
+| `/fib/35` Requests/sec | 11421 | 67024 | Rust is 5.9x faster |
+| `/fib/35` Latency (ms) | 17.5 | 3.0 | Rust is 5.9x faster |
+
+*Note: Both tests used full CPU capacity. For Rust in the dual-core test, there might have been a network bottleneck affecting the results.*
 
 ## Endpoints
 
