@@ -9,24 +9,6 @@ Both APIs expose the following endpoints:
 *   `GET /hello`: Returns a simple JSON `{"message": "Hello from ..."}`. Useful for measuring baseline framework overhead.
 *   `GET /fib/{n}`: Calculates the nth Fibonacci number (0-indexed) using an iterative algorithm. Takes an integer `n` (0 <= n <= 40) as a path parameter. Returns JSON `{"n": N, "result": R}`. Tests framework handling, path parameter parsing, integer computation, and JSON serialization under load.
 
-## Project Structure
-```plaintext
-api-performance-comparison/
-├── python-api/ # FastAPI implementation
-│ ├── app/
-│ │ ├── init.py
-│ │ └── main.py
-│ ├── requirements.txt
-│ └── Dockerfile
-├── rust-api/ # Actix Web implementation
-│ ├── src/
-│ │ └── main.rs
-│ ├── Cargo.toml
-│ └── Dockerfile
-├── bombardier.sh # Load testing script
-├── docker-compose.yml # Docker service definitions & resource limits
-└── README.md # This file
-```
 ## Setup and Running
 
 1.  **Prerequisites:**
@@ -54,4 +36,16 @@ api-performance-comparison/
 chmod +x ./bombardier.sh
 ./run_benchmark.sh
 ```
+
+## Performance Results
+
+Below is a summary of the benchmark results (averaged across 3 runs):
+
+| Metric | Python (FastAPI) | Rust (Actix Web) | Difference |
+|--------|------------------|------------------|------------|
+| `/hello` Requests/sec | 3139 | 35840 | Rust is 11.4x faster |
+| `/hello` Latency (ms) | 16.0 | 1.4 | Rust is 11.5x faster |
+| `/fib/35` Requests/sec | 2532 | 34187 | Rust is 13.5x faster |
+| `/fib/35` Latency (ms) | 19.8 | 1.5 | Rust is 13.5x faster |
+
 
